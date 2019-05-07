@@ -2,6 +2,8 @@
 
 > An Angular pipe that transforms number into Thai words. Nothing more, nothing less.
 
+[![npm version](https://badge.fury.io/js/ngx-thaibahtpipe.svg)](https://badge.fury.io/js/ngx-thaibahtpipe)
+
 # Install
 ### npm
 ```

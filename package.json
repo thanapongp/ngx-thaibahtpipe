@@ -1,6 +1,6 @@
 {
   "name": "ngx-thaibahtpipe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular pipe that transforms number into Thai words",
   "author": "Thanapong Prathumchat",
   "license": "MIT",
