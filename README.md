@@ -1,24 +1,29 @@
-# Thaibahtpipe
+# ngx-ThaiBahtPipe
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+> An Angular pipe that transforms number into Thai words. Nothing more, nothing less.
 
-## Code scaffolding
+# Install
+### npm
+```
+npm install --save ngx-thaibahtpipe
+```
 
-Run `ng generate component component-name --project thaibahtpipe` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project thaibahtpipe`.
-> Note: Don't forget to add `--project thaibahtpipe` or else it will be added to the default project in your `angular.json` file. 
+### Import it to your app's module
+```typescript
+import { NgModule } from '@angular/core';
+import { ThaiBahtPipeModule } from 'ngx-thaibahtpipe';
 
-## Build
+@NgModule({
+    imports: [ThaiBahtPipeModule]
+})
+export class AppModule {}
+```
 
-Run `ng build thaibahtpipe` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Usage
+```html
+{{ 1021.00 | thaibaht }} <!-- หนึ่งพันยี่สิบเอ็ดบาทถ้วน -->
+{{ 701021 | thaibaht }} <!-- เจ็ดแสนหนึ่งพันยี่สิบเอ็ดบาทถ้วน -->
+{{ 101701021.00 | thaibaht }} <!-- หนึ่งร้อยเอ็ดล้านเจ็ดแสนหนึ่งพันยี่สิบเอ็ดบาทถ้วน -->
 
-## Publishing
-
-After building your library with `ng build thaibahtpipe`, go to the dist folder `cd dist/thaibahtpipe` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test thaibahtpipe` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+{{ 11.10 | thaibaht }} <!-- สิบเอ็ดบาทสิบสตางค์ -->
+```
